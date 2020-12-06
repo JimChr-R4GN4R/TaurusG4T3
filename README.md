@@ -22,7 +22,6 @@ python3 TaurusG4T3.py -bo <filename.xyz>
 python3 TaurusG4T3.py -ba <filename.xyz>
 ```
 
--------------------------------------------------------
 
 Bitwise many files together and check for file signatures:
 ```
