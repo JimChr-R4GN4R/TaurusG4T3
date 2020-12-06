@@ -23,6 +23,7 @@ python3 TaurusG4T3.py -ba <filename.xyz>
 ```
 
 
+
 Bitwise many files together and check for file signatures:
 ```
 python3 TaurusG4T3.py -l <filename1.xyz> <filename2.xyz> <filename3.xyz>
