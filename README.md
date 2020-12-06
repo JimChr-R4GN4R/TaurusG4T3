@@ -30,6 +30,12 @@ python3 TaurusG4T3.py -lo <filename1.xyz> <filename2.xyz> <filename3.xyz>
 python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>
 ```
 
+
+Check if you have the last version:
+```
+python3 TaurusG4T3.py -u
+```
+
 # To-Do
 [V] Add all bitwise operations.
 [V] Update checker
