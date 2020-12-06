@@ -4,7 +4,7 @@ After every bitwise operation, binwalk will look for file signatures.
 
 
 # Installation
-open your terminal and type:
+Open your terminal and type:
 ```
 git clone https://github.com/JimChr-R4GN4R/TaurusG4T3
 cd TaurusG4T3
