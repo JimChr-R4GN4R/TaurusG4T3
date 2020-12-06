@@ -32,3 +32,4 @@ python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>
 
 # To-Do
 [V] Add all bitwise operations.
+[X] Add custom key for bitwise operations.
