@@ -16,7 +16,6 @@ pip3 install -r requirements.txt
 # Manual
 Brute-Bitwise a file and check for file signatures:
 ```
-python3 TaurusG4T3.py -b <filename.xyz>
 python3 TaurusG4T3.py -bx <filename.xyz>
 python3 TaurusG4T3.py -bo <filename.xyz>
 python3 TaurusG4T3.py -ba <filename.xyz>
@@ -26,7 +25,6 @@ python3 TaurusG4T3.py -ba <filename.xyz>
 
 Bitwise many files together and check for file signatures:
 ```
-python3 TaurusG4T3.py -l <filename1.xyz> <filename2.xyz> <filename3.xyz>
 python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>
 python3 TaurusG4T3.py -lo <filename1.xyz> <filename2.xyz> <filename3.xyz>
 python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>
