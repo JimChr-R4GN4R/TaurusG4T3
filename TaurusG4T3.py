@@ -16,12 +16,11 @@ print(logo)
 
 help_string = '''
 ===============---------------- Manual ----------------===============\n\n
-Brute-Bitwise a file and check for file signatures:\npython3 TaurusG4T3.py -b <filename.xyz>
+Brute-Bitwise a file and check for file signatures:
 python3 TaurusG4T3.py -bx <filename.xyz>
 python3 TaurusG4T3.py -bo <filename.xyz>
-python3 TaurusG4T3.py -ba <filename.xyz>\n\n{}\n
+python3 TaurusG4T3.py -ba <filename.xyz> \n\n{}\n
 Bitwise many files together and check for file signatures:
-python3 TaurusG4T3.py -l <filename1.xyz> <filename2.xyz> <filename3.xyz>
 python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>
 python3 TaurusG4T3.py -lo <filename1.xyz> <filename2.xyz> <filename3.xyz>
 python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>\n
@@ -32,17 +31,10 @@ python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>\n
 def brute_xor(filename, b_op):
 
 
-	if len(b_op) == 2:
-		bitWise_op = str(input('[i] Select Bitwise Operation (X,O,A): '))
-
-		if (bitWise_op != 'x') or (bitWise_op != 'o') or (bitWise_op != 'a'):
-			print(help_string); return
-
-	else:
-		if b_op == '-bx': bitWise_op = 'x'
-		elif b_op == '-bo': bitWise_op = 'o'
-		elif b_op == '-ba': bitWise_op = 'a'
-		else: print(help_string); return
+	if b_op == '-bx': bitWise_op = 'x'
+	elif b_op == '-bo': bitWise_op = 'o'
+	elif b_op == '-ba': bitWise_op = 'a'
+	else: print(help_string); return
 
 
 	file2bitwise = open(filename, 'rb').read().hex() # target-file bytes
@@ -52,7 +44,7 @@ def brute_xor(filename, b_op):
 
 
 
-	if bitWise_op.lower() == 'x':
+	if bitWise_op == 'x':
 
 		for i in range(256):
 
@@ -66,10 +58,10 @@ def brute_xor(filename, b_op):
 				for module in binwalk.scan('bitwise_temp_file',signature=True,quiet=False, extract=False): # check results with binwalk 
 					print('_'*80 + '\n\n')
 			except binwalk.ModuleException as e:
-				print ("Critical failure:", e)
+			    print ("Critical failure:", e)
 
 
-	elif bitWise_op.lower() == 'o':
+	elif bitWise_op == 'o':
 
 		for i in range(256):
 
@@ -83,11 +75,11 @@ def brute_xor(filename, b_op):
 				for module in binwalk.scan('bitwise_temp_file',signature=True,quiet=False, extract=False): # check results with binwalk 
 					print('_'*80 + '\n\n')
 			except binwalk.ModuleException as e:
-				print ("Critical failure:", e)
+			    print ("Critical failure:", e)
 
 
 
-	elif bitWise_op.lower() == 'a':
+	elif bitWise_op == 'a':
 
 		for i in range(256):
 
@@ -101,7 +93,7 @@ def brute_xor(filename, b_op):
 				for module in binwalk.scan('bitwise_temp_file',signature=True,quiet=False, extract=False): # check results with binwalk 
 					print('_'*80 + '\n\n')
 			except binwalk.ModuleException as e:
-				print ("Critical failure:", e)
+			    print ("Critical failure:", e)
 
 
 	os.remove("bitwise_temp_file") 
@@ -113,17 +105,11 @@ def brute_xor(filename, b_op):
 
 def xor_files_list(filenames_list,b_op):
 
-	if len(b_op) == 2:
-		bitWise_op = str(input('[i] Select Bitwise Operation (X,O,A): '))
 
-		if (bitWise_op != 'x') or (bitWise_op != 'o') or (bitWise_op != 'a'):
-			print(help_string); return
-
-	else:
-		if b_op == '-lx': bitWise_op = 'x'
-		elif b_op == '-lo': bitWise_op = 'o'
-		elif b_op == '-la': bitWise_op = 'a'
-		else: print(help_string); return
+	if b_op == '-lx': bitWise_op = 'x'
+	elif b_op == '-lo': bitWise_op = 'o'
+	elif b_op == '-la': bitWise_op = 'a'
+	else: print(help_string); return
 
 
 	files_values = []
@@ -132,7 +118,7 @@ def xor_files_list(filenames_list,b_op):
 		files_values.append( int( open(current_file, 'rb').read().hex(), 16) )
 
 
-	if bitWise_op.lower() == 'x':
+	if bitWise_op == 'x':
 		XOR_files_list = files_values[0]
 
 		for i in range(1,len(files_values)):
@@ -144,11 +130,11 @@ def xor_files_list(filenames_list,b_op):
 			for module in binwalk.scan('XOR_files_list',signature=True,quiet=False, extract=False): # check results with binwalk 
 				print('_'*80 + '\n\n')
 		except binwalk.ModuleException as e:
-				print ("Critical failure:", e)
+			    print ("Critical failure:", e)
 
 
 
-	elif bitWise_op.lower() == 'o':
+	elif bitWise_op == 'o':
 		OR_files_list = files_values[0]
 
 		for i in range(1,len(files_values)):
@@ -160,11 +146,11 @@ def xor_files_list(filenames_list,b_op):
 			for module in binwalk.scan('OR_files_list',signature=True,quiet=False, extract=False): # check results with binwalk 
 				print('_'*80 + '\n\n')
 		except binwalk.ModuleException as e:
-				print ("Critical failure:", e)
+			    print ("Critical failure:", e)
 
 
 
-	elif bitWise_op.lower() == 'a':
+	elif bitWise_op == 'a':
 		AND_files_list = files_values[0]
 
 		for i in range(1,len(files_values)):
@@ -176,7 +162,7 @@ def xor_files_list(filenames_list,b_op):
 			for module in binwalk.scan('AND_files_list',signature=True,quiet=False, extract=False): # check results with binwalk 
 				print('_'*80 + '\n\n')
 		except binwalk.ModuleException as e:
-				print ("Critical failure:", e)
+			    print ("Critical failure:", e)
 
 
 try:
@@ -194,7 +180,7 @@ try:
 		if len(sys.argv[2:]) > 1:
 			xor_files_list(sys.argv[2:],sys.argv[1])
 		else:
-			print("[!] Please select at least 2 files to xor.")
+			print("[!] Please select at least 2 files to bitwise.")
 
 	else:
 		print(help_string)
