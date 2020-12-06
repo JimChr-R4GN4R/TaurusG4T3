@@ -19,12 +19,15 @@ help_string = '''
 Brute-Bitwise a file and check for file signatures:
 python3 TaurusG4T3.py -bx <filename.xyz>
 python3 TaurusG4T3.py -bo <filename.xyz>
-python3 TaurusG4T3.py -ba <filename.xyz> \n\n{}\n
+python3 TaurusG4T3.py -ba <filename.xyz>\n\n{}\n
 Bitwise many files together and check for file signatures:
 python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>
 python3 TaurusG4T3.py -lo <filename1.xyz> <filename2.xyz> <filename3.xyz>
-python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>\n
-'''.format('-'*55)
+python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>\n\n{}\n
+Check if you have the last version:
+python3 TaurusG4T3.py -u
+\n
+'''.format('-'*55,'-'*55)
 
 
 
@@ -182,6 +185,14 @@ try:
 		else:
 			print("[!] Please select at least 2 files to bitwise.")
 
+	elif sys.argv[1] == '-u':
+
+		import urllib.request
+		try:
+			with urllib.request.urlopen('https://raw.githubusercontent.com/JimChr-R4GN4R/TaurusG4T3/main/.last_version') as response:
+				print("Last version:",response.read().decode('utf-8'))
+		except:
+			print('[!] Please check your internet connection or maybe Github is down and the end of the world has started!')
 	else:
 		print(help_string)
 
