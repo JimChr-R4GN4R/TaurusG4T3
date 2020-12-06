@@ -31,6 +31,7 @@ python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>\n
 
 def brute_xor(filename, b_op):
 
+
 	if len(b_op) == 2:
 		bitWise_op = str(input('[i] Select Bitwise Operation (X,O,A): '))
 
@@ -65,7 +66,7 @@ def brute_xor(filename, b_op):
 				for module in binwalk.scan('bitwise_temp_file',signature=True,quiet=False, extract=False): # check results with binwalk 
 					print('_'*80 + '\n\n')
 			except binwalk.ModuleException as e:
-			    print ("Critical failure:", e)
+				print ("Critical failure:", e)
 
 
 	elif bitWise_op.lower() == 'o':
@@ -82,7 +83,7 @@ def brute_xor(filename, b_op):
 				for module in binwalk.scan('bitwise_temp_file',signature=True,quiet=False, extract=False): # check results with binwalk 
 					print('_'*80 + '\n\n')
 			except binwalk.ModuleException as e:
-			    print ("Critical failure:", e)
+				print ("Critical failure:", e)
 
 
 
@@ -100,7 +101,7 @@ def brute_xor(filename, b_op):
 				for module in binwalk.scan('bitwise_temp_file',signature=True,quiet=False, extract=False): # check results with binwalk 
 					print('_'*80 + '\n\n')
 			except binwalk.ModuleException as e:
-			    print ("Critical failure:", e)
+				print ("Critical failure:", e)
 
 
 	os.remove("bitwise_temp_file") 
@@ -143,7 +144,7 @@ def xor_files_list(filenames_list,b_op):
 			for module in binwalk.scan('XOR_files_list',signature=True,quiet=False, extract=False): # check results with binwalk 
 				print('_'*80 + '\n\n')
 		except binwalk.ModuleException as e:
-			    print ("Critical failure:", e)
+				print ("Critical failure:", e)
 
 
 
@@ -159,7 +160,7 @@ def xor_files_list(filenames_list,b_op):
 			for module in binwalk.scan('OR_files_list',signature=True,quiet=False, extract=False): # check results with binwalk 
 				print('_'*80 + '\n\n')
 		except binwalk.ModuleException as e:
-			    print ("Critical failure:", e)
+				print ("Critical failure:", e)
 
 
 
@@ -175,7 +176,7 @@ def xor_files_list(filenames_list,b_op):
 			for module in binwalk.scan('AND_files_list',signature=True,quiet=False, extract=False): # check results with binwalk 
 				print('_'*80 + '\n\n')
 		except binwalk.ModuleException as e:
-			    print ("Critical failure:", e)
+				print ("Critical failure:", e)
 
 
 try:
