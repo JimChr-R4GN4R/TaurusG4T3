@@ -31,7 +31,7 @@ python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>
 ```
 
 
-Check if you have the last version:
+Check if you have the latest version:
 ```
 python3 TaurusG4T3.py -u
 ```
