@@ -15,11 +15,9 @@ pip3 install -r requirements.txt
 
 # Manual
 Brute a bitwise operations on a file and check for file signatures:
-
 `python3 TaurusG4T3.py -b <filename.xyz>`
 
 
 
 Do a bitwise operation with many files together and check for file signatures:
-
 `python3 bruxor.py -l <filename1.xyz> <filename2.xyz> <filename3.xyz>`
