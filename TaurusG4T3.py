@@ -31,7 +31,6 @@ python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>\n
 
 def brute_xor(filename, b_op):
 
-
 	if len(b_op) == 2:
 		bitWise_op = str(input('[i] Select Bitwise Operation (X,O,A): '))
 
