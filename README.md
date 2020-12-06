@@ -21,3 +21,6 @@ Brute a bitwise operations on a file and check for file signatures:
 
 Do a bitwise operation with many files together and check for file signatures:
 `python3 bruxor.py -l <filename1.xyz> <filename2.xyz> <filename3.xyz>`
+
+# To-Do
+[X] Add OR and AND bitwise operations.
