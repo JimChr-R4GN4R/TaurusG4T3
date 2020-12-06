@@ -1,4 +1,10 @@
 # TaurusG4T3
+ _____                          _____   ___ _____ _____ 
+|_   _|   Coded By R4GN4R      |  __ \ /   |_   _|____ |
+  | | __ _ _   _ _ __ _   _ ___| |  \// /| | | |     / /
+  | |/ _` | | | | '__| | | / __| | __/ /_| | | |     \ \
+  | | (_| | |_| | |  | |_| \__ \ |_\ \___  | | | .___/ /
+  \_/\__,_|\__,_|_|   \__,_|___/\____/   |_/ \_/ \____/  V1.1
 TaurusG4T3 is a script in python3 that you can do bitwise operations with all possible values on a file or you can do bitwise operations on many files together. 
 After every bitwise operation, binwalk will look for file signatures.
 
