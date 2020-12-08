@@ -21,7 +21,12 @@ python3 TaurusG4T3.py -bo <filename.xyz> # Brute-Or a file
 python3 TaurusG4T3.py -ba <filename.xyz> # Brute-And a file
 ```
 
-
+Bitwise a file with a specific key:
+```
+python3 TaurusG4T3.py -kbx <filename.xyz> <key> # Xor a file with a specific key
+python3 TaurusG4T3.py -kbo <filename.xyz> <key> # Or a file with a specific key
+python3 TaurusG4T3.py -kba <filename.xyz> <key> # And a file with a specific key
+```
 
 Bitwise many files together and check for file signatures:
 ```
