@@ -9,7 +9,7 @@ logo = r'''
   | | __ _ _   _ _ __ _   _ ___| |  \// /| | | |     / /
   | |/ _` | | | | '__| | | / __| | __/ /_| | | |     \ \
   | | (_| | |_| | |  | |_| \__ \ |_\ \___  | | | .___/ /
-  \_/\__,_|\__,_|_|   \__,_|___/\____/   |_/ \_/ \____/  V1.3
+  \_/\__,_|\__,_|_|   \__,_|___/\____/   |_/ \_/ \____/  V1.4
 '''
 print(logo)
 
@@ -17,17 +17,17 @@ print(logo)
 help_string = '''
 ===============---------------- Manual ----------------===============\n\n
 Brute-Bitwise a file and check for file signatures:
-python3 TaurusG4T3.py -bx <filename.xyz>
-python3 TaurusG4T3.py -bo <filename.xyz>
-python3 TaurusG4T3.py -ba <filename.xyz>\n\n{}\n
+python3 TaurusG4T3.py -bx <filename.xyz> # Brute-Xor a file
+python3 TaurusG4T3.py -bo <filename.xyz> # Brute-Or a file
+python3 TaurusG4T3.py -ba <filename.xyz> # Brute-And a file\n\n{}\n
 Bitwise many files together and check for file signatures:
-python3 TaurusG4T3.py -lx <filename1.xyz> <filename2.xyz> <filename3.xyz>
-python3 TaurusG4T3.py -lo <filename1.xyz> <filename2.xyz> <filename3.xyz>
-python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz>\n\n{}\n
+python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz> # Brute-Xor many files together
+python3 TaurusG4T3.py -lo <filename1.xyz> <filename2.xyz> <filename3.xyz> # Brute-Or many files together
+python3 TaurusG4T3.py -la <filename1.xyz> <filename2.xyz> <filename3.xyz> # Brute-And many files together\n\n{}\n
 Bitwise a file with a specific key:
-python3 TaurusG4T3.py -kbx <filename.xyz> <key>
-python3 TaurusG4T3.py -kbo <filename.xyz> <key>
-python3 TaurusG4T3.py -kba <filename.xyz> <key>\n\n{}\n
+python3 TaurusG4T3.py -kbx <filename.xyz> <key> # Xor a file with a specific key
+python3 TaurusG4T3.py -kbo <filename.xyz> <key> # Or a file with a specific key
+python3 TaurusG4T3.py -kba <filename.xyz> <key> # And a file with a specific key\n\n{}\n
 Check if you have the last version:
 python3 TaurusG4T3.py -u
 \n
