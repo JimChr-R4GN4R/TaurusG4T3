@@ -46,4 +46,4 @@ python3 TaurusG4T3.py -u
 
 [V] Update checker
 
-[X] Add custom key for bitwise operations.
+[V] Add custom key for bitwise operations.
